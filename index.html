@@ -1,395 +1,378 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC | Southern Opportunity Corridor</title>
 
-<title>SOC | Southern Opportunity Corridor</title>
+    <meta
+        name="description"
+        content="Southern Opportunity Corridor connects companies, investors and institutions across emerging markets."
+    >
 
-<meta name="description" content="Southern Opportunity Corridor connects companies, investors and institutions across emerging markets.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
 
-html{
-    scroll-behavior:smooth;
-}
+        /* NAVIGATION */
 
-body{
-    font-family:Segoe UI,Arial,sans-serif;
-    background:#f5f7fb;
-    color:#1a1a1a;
-    line-height:1.7;
-}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
 
-/* NAVIGATION */
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    z-index:1000;
-}
+        .nav-logo {
+            font-weight: 700;
+            color: #003b8e;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
 
-.nav-container{
-    max-width:1200px;
-    margin:auto;
-    padding:15px 25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+        /* HERO */
 
-.nav-logo{
-    font-weight:700;
-    color:#003b8e;
-    font-size:22px;
-}
+        header {
+            background: linear-gradient(135deg, #003b8e, #0057d9);
+            color: #ffffff;
+            padding: 140px 20px 90px;
+            text-align: center;
+        }
 
-.nav-links a{
-    text-decoration:none;
-    margin-left:20px;
-    color:#003b8e;
-    font-weight:600;
-}
+        .logo {
+            font-size: 72px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
 
-/* HERO */
+        .subtitle {
+            font-size: 26px;
+            margin-top: 15px;
+        }
 
-header{
-    background:linear-gradient(135deg,#003b8e,#0057d9);
-    color:white;
-    padding:140px 20px 90px;
-    text-align:center;
-}
+        .hero-text {
+            max-width: 850px;
+            margin: 30px auto 0;
+            font-size: 18px;
+            opacity: 0.95;
+        }
 
-.logo{
-    font-size:72px;
-    font-weight:700;
-    letter-spacing:4px;
-}
+        .hero-buttons {
+            margin-top: 35px;
+        }
 
-.subtitle{
-    font-size:26px;
-    margin-top:15px;
-}
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 600;
+        }
 
-.hero-text{
-    max-width:850px;
-    margin:30px auto 0;
-    font-size:18px;
-    opacity:0.95;
-}
+        .btn-primary {
+            background: #ffffff;
+            color: #003b8e;
+        }
 
-.hero-buttons{
-    margin-top:35px;
-}
+        .btn-primary:hover {
+            background: #f0f0f0;
+        }
 
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    border-radius:8px;
-    text-decoration:none;
-    margin:8px;
-    transition:.3s;
-    font-weight:600;
-}
+        .btn-secondary {
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
 
-.btn-primary{
-    background:#ffffff;
-    color:#003b8e;
-}
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
 
-.btn-primary:hover{
-    background:#f0f0f0;
-}
+        /* CONTENT */
 
-.btn-secondary{
-    color:#ffffff;
-    border:2px solid #ffffff;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
 
-.btn-secondary:hover{
-    background:rgba(255,255,255,.15);
-}
+        section {
+            scroll-margin-top: 80px;
+        }
 
-/* CONTENT */
+        .section-title {
+            text-align: center;
+            color: #003b8e;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 20px;
-}
+        .about {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
 
-.section-title{
-    text-align:center;
-    color:#003b8e;
-    margin-bottom:35px;
-    font-size:32px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
 
-.card{
-    background:#ffffff;
-    padding:30px;
-    border-radius:14px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
+        .card h3 {
+            color: #003b8e;
+            margin-bottom: 12px;
+        }
 
-.card h3{
-    color:#003b8e;
-    margin-bottom:12px;
-}
+        .markets {
+            background: #ffffff;
+            margin-top: 70px;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
 
-.markets{
-    background:#ffffff;
-    margin-top:70px;
-    padding:40px;
-    border-radius:14px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
+        .market-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 25px;
+        }
 
-.market-list{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:14px;
-    margin-top:25px;
-}
+        .market {
+            background: #e8f0ff;
+            color: #003b8e;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
 
-.market{
-    background:#e8f0ff;
-    color:#003b8e;
-    padding:10px 18px;
-    border-radius:30px;
-    font-weight:600;
-}
+        /* CONTACT */
 
-/* CONTACT */
+        .contact {
+            text-align: center;
+            margin-top: 80px;
+        }
 
-.contact{
-    text-align:center;
-    margin-top:80px;
-}
+        .contact p {
+            margin: 15px 0;
+            font-size: 17px;
+        }
 
-.contact p{
-    margin:15px 0;
-    font-size:17px;
-}
+        .contact a {
+            color: #0057d9;
+            text-decoration: none;
+        }
 
-.contact a{
-    color:#0057d9;
-    text-decoration:none;
-}
+        .contact a:hover {
+            text-decoration: underline;
+        }
 
-.contact a:hover{
-    text-decoration:underline;
-}
+        /* FOOTER */
 
-/* FOOTER */
+        footer {
+            background: #003b8e;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-footer{
-    background:#003b8e;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
+        footer p {
+            margin: 6px 0;
+        }
 
-footer p{
-    margin:6px 0;
-}
+        /* ACCESSIBILITY */
 
-/* MOBILE */
+        a:focus-visible {
+            outline: 3px solid #ffcc00;
+            outline-offset: 3px;
+        }
 
-@media(max-width:768px){
+        /* MOBILE */
 
-.nav-container{
-    flex-direction:column;
-    gap:10px;
-}
+        @media (max-width: 768px) {
+            .nav-container {
+                justify-content: center;
+            }
 
-.logo{
-    font-size:52px;
-}
+            .logo {
+                font-size: 52px;
+            }
 
-.subtitle{
-    font-size:22px;
-}
+            .subtitle {
+                font-size: 22px;
+            }
 
-.section-title{
-    font-size:28px;
-}
+            .hero-text {
+                font-size: 16px;
+            }
 
-}
+            .section-title {
+                font-size: 28px;
+            }
 
-</style>
+            .container {
+                padding: 60px 20px;
+            }
 
+            .markets {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 120px 18px 70px;
+            }
+
+            .logo {
+                font-size: 44px;
+                letter-spacing: 3px;
+            }
+
+            .subtitle {
+                font-size: 19px;
+            }
+
+            .hero-text {
+                font-size: 15px;
+            }
+
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 260px;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+        }
+
+        /* REDUCED MOTION */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="nav-container">
+    <!-- NAVIGATION -->
 
-        <div class="nav-logo">SOC</div>
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">SOC</div>
+        </div>
+    </nav>
 
-    </div>
-</nav>
+    <!-- HERO -->
 
-<header>
+    <header>
+        <div class="logo">SOC</div>
 
-    <div class="logo">SOC</div>
-
-    <div class="subtitle">
-        Southern Opportunity Corridor
-    </div>
-
-    <div class="hero-text">
-        Connecting companies, investors and institutions across emerging markets through strategic partnerships, investment facilitation and business development initiatives.
-    </div>
-
-    <div class="hero-buttons">
-
-        <a href="https://www.linkedin.com/company/soccorridor/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn btn-primary">
-            LinkedIn
-        </a>
-
-        <a href="mailto:info@soccorridor.com"
-           class="btn btn-secondary">
-            Contact Us
-        </a>
-
-    </div>
-
-</header>
-
-<div class="container">
-
-<section id="about" class="about">
-
-    <h2 class="section-title">About SOC</h2>
-
-    <p>
-        Southern Opportunity Corridor (SOC) is a business platform dedicated to connecting companies, investors and institutions across emerging markets. We facilitate strategic partnerships, market access opportunities and investment initiatives that contribute to sustainable economic growth and long-term value creation.
-    </p>
-
-</section>
-
-<section id="focus">
-
-    <h2 class="section-title">Core Activities</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Business Development</h3>
-            <p>Connecting businesses with strategic opportunities and trusted partners.</p>
+        <div class="subtitle">
+            Southern Opportunity Corridor
         </div>
 
-        <div class="card">
-            <h3>Investment Facilitation</h3>
-            <p>Supporting investors, project developers and growth initiatives.</p>
+        <p class="hero-text">
+            Connecting companies, investors and institutions across
+            emerging markets through strategic partnerships, investment
+            facilitation and business development initiatives.
+        </p>
+
+        <div class="hero-buttons">
+            <a
+                href="https://www.linkedin.com/company/soccorridor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                aria-label="Visit SOC on LinkedIn"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="mailto:info@soccorridor.com"
+                class="btn btn-secondary"
+            >
+                Contact Us
+            </a>
         </div>
+    </header>
 
-        <div class="card">
-            <h3>Market Entry</h3>
-            <p>Helping organizations expand into new markets with confidence.</p>
-        </div>
+    <!-- MAIN CONTENT -->
 
-        <div class="card">
-            <h3>Strategic Partnerships</h3>
-            <p>Building cross-border collaborations that create measurable impact.</p>
-        </div>
+    <main class="container">
 
-    </div>
+        <!-- ABOUT -->
 
-</section>
+        <section id="about" class="about">
+            <h2 class="section-title">About SOC</h2>
 
-<section id="markets" class="markets">
-
-    <h2 class="section-title">Priority Markets</h2>
-
-    <div class="market-list">
-
-        <span class="market">Angola</span>
-        <span class="market">Botswana</span>
-        <span class="market">Brazil</span>
-        <span class="market">Mozambique</span>
-        <span class="market">Namibia</span>
-        <span class="market">Qatar</span>
-        <span class="market">South Africa</span>
-        <span class="market">Tanzania</span>
-
-    </div>
-
-</section>
-
-<section id="contact" class="contact">
-
-    <h2 class="section-title">Explore Opportunities</h2>
-
-    <p>
-        📧
-        <a href="mailto:info@soccorridor.com">
-            info@soccorridor.com
-        </a>
-    </p>
-
-    <p>
-        🌐
-        <a href="https://soccorridor.com"
-           target="_blank"
-           rel="noopener noreferrer">
-            www.soccorridor.com
-        </a>
-    </p>
-
-    <p>
-        💼
-        <a href="https://www.linkedin.com/company/soccorridor/"
-           target="_blank"
-           rel="noopener noreferrer">
-            LinkedIn
-        </a>
-    </p>
-
-</section>
-
-</div>
-
-<footer>
-
-    <p>© <span id="year"></span> Southern Opportunity Corridor (SOC)</p>
-
-    <p>Connecting Opportunities Across Emerging Markets</p>
-
-</footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+            <p>
+                Southern Opportunity Corridor (SOC) is a business platform
+                dedicated to connecting companies, investors and institutions
+                across emerging markets. We facilitate strategic partn
+```
