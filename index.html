@@ -7,156 +7,226 @@
 
 <title>SOC | Southern Opportunity Corridor</title>
 
-<meta name="description" content="Southern Opportunity Corridor connects companies, investors and institutions across emerging markets.">
+https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Segoe UI, Arial, sans-serif;
-    background:#f4f7fb;
-    color:#1a1a1a;
-    line-height:1.6;
+font-family:'Inter',sans-serif;
+background:#f8f8f8;
+color:#222;
+}
+
+:root{
+--gold:#b88b3a;
+--dark:#08111c;
+--light:#ffffff;
 }
 
 header{
-    background:linear-gradient(135deg,#003b8e,#0057d9);
-    color:white;
-    padding:80px 20px;
-    text-align:center;
+background:#fff;
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-    font-size:64px;
-    font-weight:700;
-    letter-spacing:3px;
+font-size:38px;
+font-weight:700;
+color:var(--gold);
 }
 
-.subtitle{
-    font-size:24px;
-    margin-top:10px;
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
 }
 
-.tagline{
-    margin-top:15px;
-    font-size:18px;
-    opacity:0.95;
+nav a{
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+color:#333;
 }
 
-.hero-buttons{
-    margin-top:35px;
+.contact-btn{
+background:var(--gold);
+color:white;
+padding:12px 20px;
+border-radius:4px;
+text-decoration:none;
+font-weight:600;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    margin:8px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
+.hero{
+height:420px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
 }
 
-.btn-primary{
-    background:white;
-    color:#003b8e;
+.hero-content{
+max-width:1200px;
+margin:auto;
+padding:0 40px;
+color:white;
 }
 
-.btn-primary:hover{
-    background:#f0f0f0;
+.hero h1{
+font-size:56px;
+margin-bottom:10px;
 }
 
-.btn-secondary{
-    border:2px solid white;
-    color:white;
-}
-
-.btn-secondary:hover{
-    background:rgba(255,255,255,0.15);
+.hero p{
+font-size:22px;
+max-width:700px;
 }
 
 .container{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
+max-width:1200px;
+margin:auto;
+padding:80px 30px;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:35px;
-    color:#003b8e;
+font-size:36px;
+margin-bottom:30px;
+color:var(--dark);
 }
 
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:0 auto 50px;
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.mission-box{
+background:var(--dark);
+color:white;
+padding:30px;
+border-radius:10px;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+background:white;
+padding:30px;
+border-radius:12px;
+border:1px solid #eee;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(0,0,0,.10);
 }
 
 .card h3{
-    color:#003b8e;
-    margin-bottom:10px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.stats{
+background:var(--dark);
+color:white;
+padding:50px 0;
+}
+
+.stats-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+text-align:center;
+}
+
+.stat h2{
+color:var(--gold);
+font-size:36px;
 }
 
 .markets{
-    background:white;
-    border-radius:12px;
-    padding:30px;
-    margin-top:40px;
-    text-align:center;
+padding:80px 30px;
+background:white;
 }
 
 .market-list{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
-    margin-top:20px;
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:25px;
 }
 
 .market{
-    background:#e8f0ff;
-    color:#003b8e;
-    padding:10px 16px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
+background:#f2f2f2;
+padding:12px 18px;
+border-left:4px solid var(--gold);
 }
 
-.contact{
-    text-align:center;
-    margin-top:60px;
+.cta{
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600');
+background-size:cover;
+background-position:center;
+padding:100px 20px;
+text-align:center;
+color:white;
 }
 
-.contact a{
-    color:#0057d9;
-    text-decoration:none;
+.cta h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.cta a{
+background:var(--gold);
+padding:14px 28px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
 }
 
 footer{
-    background:#003b8e;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:60px;
+background:var(--dark);
+color:white;
+padding:50px 30px;
+}
+
+.footer-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+}
+
+.footer-title{
+color:var(--gold);
+margin-bottom:15px;
 }
 
 </style>
@@ -169,63 +239,105 @@ footer{
 
 <div class="logo">SOC</div>
 
-<div class="subtitle">
-Southern Opportunity Corridor
-</div>
+<nav>
+<ul>
+<li>#Home</a></li>
+<li>#About Us</a></li>
+<li>#Markets</a></li>
+<li>#Services</a></li>
+<li>#Opportunities Hub</a></li>
+<li>#Insights</a></li>
+</ul>
+</nav>
 
-<div class="hero-buttons">
-
-<a href="https://www.linkedin.com/company/soccorridor/"
-   class="btn btn-primary"
-   target="_blank">
-   LinkedIn
+<a href="mailto:info@soccorridor.com" class="contact-btn">
+Connect With Us
 </a>
-
-<a href="mailto:info@soccorridor.com"
-   class="btn btn-secondary">
-   Contact Us
-</a>
-
-</div>
 
 </header>
 
-<div class="container">
+<section class="hero">
 
-<section class="about">
-
-<h2 class="section-title">Who We Are</h2>
-
-<p>
-Southern Opportunity Corridor (SOC) is a business platform dedicated to connecting companies, investors and institutions across emerging markets. We facilitate strategic partnerships, investment opportunities and market access initiatives that drive sustainable growth and long-term value creation.
-</p>
+<div class="hero-content">
+<h1>ABOUT US</h1>
+<p>Connecting ambition with opportunity across emerging markets.</p>
+</div>
 
 </section>
 
-<section>
+<div class="container">
 
-<h2 class="section-title">Our Focus</h2>
+<h2 class="section-title">Our Mission</h2>
+
+<div class="about-grid">
+
+<div>
+<p>
+Southern Opportunity Corridor connects businesses,
+investors and institutions across Africa, Latin America
+and strategic emerging markets.
+</p>
+</div>
+
+<div class="mission-box">
+<h3>Our Vision</h3>
+<p>
+To be the leading strategic platform creating
+high-value partnerships and transformational
+investment opportunities.
+</p>
+</div>
+
+</div>
 
 <div class="cards">
 
 <div class="card">
-<h3>Business Development</h3>
-<p>Connecting businesses with high-potential opportunities and partners.</p>
+<h3>Integrity</h3>
+<p>We act with transparency and accountability.</p>
 </div>
 
 <div class="card">
-<h3>Investment Facilitation</h3>
-<p>Supporting investors and project sponsors in emerging markets.</p>
+<h3>Collaboration</h3>
+<p>Creating long-term value through partnerships.</p>
 </div>
 
 <div class="card">
-<h3>Market Entry</h3>
-<p>Helping organizations establish and expand their regional presence.</p>
+<h3>Excellence</h3>
+<p>Delivering world-class execution.</p>
 </div>
 
 <div class="card">
-<h3>Strategic Partnerships</h3>
-<p>Building cross-border collaborations that generate measurable impact.</p>
+<h3>Impact</h3>
+<p>Driving measurable economic growth.</p>
+</div>
+
+</div>
+
+</div>
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h2>8+</h2>
+<p>Markets</p>
+</div>
+
+<div class="stat">
+<h2>100+</h2>
+<p>Opportunities</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Partners</p>
+</div>
+
+<div class="stat">
+<h2>20+</h2>
+<p>Projects</p>
 </div>
 
 </div>
@@ -234,67 +346,58 @@ Southern Opportunity Corridor (SOC) is a business platform dedicated to connecti
 
 <section class="markets">
 
+<div class="container">
+
 <h2 class="section-title">Target Markets</h2>
 
 <div class="market-list">
-
-<span class="market">Angola</span>
-<span class="market">Botswana</span>
-<span class="market">Brazil</span>
-<span class="market">Mozambique</span>
-<span class="market">Namibia</span>
-<span class="market">Qatar</span>
-<span class="market">South Africa</span>
-<span class="market">Tanzania</span>
+<div class="market">Angola</div>
+<div class="market">Mozambique</div>
+<div class="market">South Africa</div>
+<div class="market">Botswana</div>
+<div class="market">Namibia</div>
+<div class="market">Brazil</div>
+<div class="market">Qatar</div>
+<div class="market">Tanzania</div>
+</div>
 
 </div>
 
 </section>
 
-<section class="contact">
+<section class="cta">
 
-<h2 class="section-title">Explore Opportunities</h2>
+<h2>Let's Build The Future Together</h2>
 
-<p>
-📧
 <a href="mailto:info@soccorridor.com">
-SOC Corridor &lt;info@soccorridor.com&gt;
+Connect With Us
 </a>
-</p>
-
-<p>
-🌐
-<a href="https://soccorridor.com" target="_blank">
-soccorridor.com
-</a>
-</p>
-
-<p>
-💼
-<a href="https://www.linkedin.com/company/soccorridor/" target="_blank">
-LinkedIn
-</a>
-</p>
-
-<p style="margin-top:25px;">
-<a href="mailto:info@soccorridor.com"
-   class="btn btn-primary">
-</a>
-</p>
 
 </section>
-
-</div>
 
 <footer>
 
-<p>
-© 2026 Southern Opportunity Corridor (SOC)
-</p>
+<div class="footer-grid">
 
-<p>
-Connecting Opportunities Across Emerging Markets
-</p>
+<div>
+<h3 class="footer-title">SOC</h3>
+<p>Connecting opportunities across emerging markets.</p>
+</div>
+
+<div>
+<h3 class="footer-title">Links</h3>
+<p>About Us</p>
+<p>Markets</p>
+<p>Services</p>
+</div>
+
+<div>
+<h3 class="footer-title">Contact</h3>
+<p>info@soccorridor.com</p>
+<p>soccorridor.com</p>
+</div>
+
+</div>
 
 </footer>
 
